@@ -149,7 +149,6 @@ app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toas
 			
 			tdata = itemsFactory.editItem(item);
 			tdata.$promise.then(function (response) {
-				console.log(response);
 				$scope.populateTable($scope.tableParams.page(), $scope.tableParams.count(), $scope.fromto);
 				toastr.success('Item ' + item.name + ' Edited Successfully');
 				$scope.editShow = false;

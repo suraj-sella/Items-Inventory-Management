@@ -43,7 +43,7 @@ app.factory('itemsFactory', function($resource) {
 
     resource.editItem = function(item) {
         return resource.update({name : item, action : 3}, function(){
-            console.log('Item Edit chal gaya bhai');    
+            // console.log('Item Edit chal gaya bhai');    
         }, function(response){
             console.log(response);
         });
