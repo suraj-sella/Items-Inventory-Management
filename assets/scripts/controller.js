@@ -1,6 +1,6 @@
 'use strict';
-app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toastr', '$window', function ($scope, NgTableParams, itemsFactory, toastr, $window) {
-    
+app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toastr', '$window', 'CORE_CONFIG', function ($scope, NgTableParams, itemsFactory, toastr, $window, CORE_CONFIG) {
+	
 	var tabledata = 0;
 	var tdata = {};
 	var pagenum = 1;

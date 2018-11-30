@@ -1,6 +1,6 @@
 'use strict';
 app.factory('itemsFactory', function($resource) {
-    var resource =  $resource('http://localhost/project/index.php/api/items/items', 
+    var resource =  $resource('http://localhost/Items-Inventory-Management/index.php/api/items/items', 
         {},
         { update: { method: 'PUT' }}
     );
