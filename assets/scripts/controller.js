@@ -1,5 +1,13 @@
 'use strict';
-app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toastr', '$window', 'CORE_CONFIG', function ($scope, NgTableParams, itemsFactory, toastr, $window, CORE_CONFIG) {
+app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toastr', '$timeout', 'Excel', 
+function ($scope, NgTableParams, itemsFactory, toastr, $timeout, Excel) {
+
+	// Export Table As Excel
+	$scope.exportToExcel=function(tableId){ 
+		// ex: '#my-table'
+        var exportHref = Excel.tableToExcel(tableId,'WireWorkbenchDataExport');
+        $timeout(function(){location.href=exportHref;},100); // trigger download
+	}
 	
 	var tabledata = 0;
 	var tdata = {};
@@ -51,7 +59,7 @@ app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toas
 	}
 
 	$scope.populateTable(pagenum, pagecount, $scope.fromto);
-	$scope.title = 'Basic Item Inventory'
+	$scope.docTitle = 'Basic Item Inventory'
 	$scope.myForm = {};
 	$scope.item = {};
 	$scope.edititem = {};
@@ -62,7 +70,6 @@ app.controller('myController', ['$scope', 'NgTableParams', 'itemsFactory', 'toas
 	$scope.addItem = function () {
 		$scope.editShow ? ($scope.editShow = false) : $scope.editShow;
 		var exists = tabledata.some(function (o) {
-			// return $scope.item.name in o;
 			return Object.keys(o).some(function (k) {
 				return o[k] === $scope.item.name;
 			});

@@ -10,7 +10,7 @@ class Items_Model extends CI_Model {
 
 	public function getItemsByRange($from, $to){
 		$this->db->where('quantity >=', $from);
-		$this->db->where('quantity <=', $to);
+		$this->db->where('quantity <', $to);
 		$query=$this->db->get('items');
 		$result=$query->result();
 		return $result;

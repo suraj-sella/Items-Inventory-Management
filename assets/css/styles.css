@@ -145,3 +145,16 @@ table thead th{
 	background-color: rgb(0, 137, 142);
 	text-shadow: -3px 3px 10px rgba(255,255,255,.75);
 }
+select.form-control:not([size]):not([multiple]) {
+	height: calc(1.8rem + 2px);
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;
+}
+.ng-table th.filter .input-filter{
+	padding: .25rem .5rem;
+    font-size: .875rem;
+    line-height: 1.5;
+    border-radius: .2rem;	
+}

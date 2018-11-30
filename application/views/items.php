@@ -1,9 +1,9 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!doctype html>
-<html lang="en" ng-app='myApp'>
+<html lang="en" ng-app='myApp' ng-controller='myController'>
 
 <head>
-	<title ng-bind='title'></title>
+	<title>{{ docTitle }}</title>
 	<link rel="shortcut icon" href="assets/img/favicon.png" />
 	<!-- Required meta tags -->
 	<meta charset="utf-8">

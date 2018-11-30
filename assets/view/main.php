@@ -1,10 +1,10 @@
-<table class="table table-bordered table-striped text-center" ng-table="tableParams" show-filter="true">
+<table id="itemsTable" class="table table-bordered table-striped text-center" ng-table="tableParams" show-filter="true">
 	<tbody>
 		<tr ng-repeat="item in $data">
 			<td data-title="'Name'" data-filter="{name: 'text'}" data-sortable="'name'">{{item.name}}</td>
 			<td data-title="'Quantity'" data-filter="{quantity: 'assets/view/fromto.html'}"
 			 data-sortable="'quantity'">{{item.quantity}}</td>
-			<td data-title="'Actions'">
+			<td data-title="'Actions'" data-filter = "{actions : 'assets/view/exportbutton.html'}">
 				<div class="btn-group">
 					<button type="button" class="btn btn-info btn-sm button-block faa-parent animated-hover" ng-click='editItem(item)'><i
 						 class="fa fa-wrench faa-vertical"></i></button>
@@ -25,10 +25,10 @@
 							<input type="text" class="form-control" id="editItem" placeholder="Edit Item" required ng-model="edititem.name">
 						</div>
 						<div class="form-group col-md-2">
-							<input type="number" class="form-control" id="editQuantity" placeholder="Edit Quantity" required ng-model="edititem.quantity">
+							<input type="number" class="form-control btn-sm" id="editQuantity" placeholder="Edit Quantity" required ng-model="edititem.quantity">
 						</div>
 						<div class="form-group col-md-3">
-							<button type="submit" class="btn btn-primary faa-parent animated-hover"><i class="fa fa-wrench faa-pulse faa-fast"></i>
+							<button type="submit" class="btn btn-primary btn-sm faa-parent animated-hover"><i class="fa fa-wrench faa-pulse faa-fast"></i>
 								Update Item</button>
 						</div>
 					</div>
@@ -40,10 +40,10 @@
 				<form ng-submit="addItem()">
 					<div class="form-row">
 						<div class="form-group col-md-9">
-							<input type="text" class="form-control" id="inputItem" placeholder="Enter New Item Name" required ng-model="item.name">
+							<input type="text" class="form-control btn-sm" id="inputItem" placeholder="Enter New Item Name" required ng-model="item.name">
 						</div>
 						<div class="form-group col-md-3">
-							<button type="submit" class="btn btn-primary faa-parent animated-hover"><i class="fa fa-plus faa-pulse faa-fast"></i>
+							<button type="submit" class="btn btn-primary btn-sm faa-parent animated-hover"><i class="fa fa-plus faa-pulse faa-fast"></i>
 								New Item</button>
 						</div>
 					</div>
