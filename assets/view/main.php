@@ -22,7 +22,7 @@
 				<form ng-submit="editThisItem(edititem)">
 					<div class="form-row">
 						<div class="form-group col-md-6">
-							<input type="text" class="form-control" id="editItem" placeholder="Edit Item" required ng-model="edititem.name">
+							<input type="text" class="form-control btn-sm" id="editItem" placeholder="Edit Item" required ng-model="edititem.name">
 						</div>
 						<div class="form-group col-md-2">
 							<input type="number" class="form-control btn-sm" id="editQuantity" placeholder="Edit Quantity" required ng-model="edititem.quantity">
