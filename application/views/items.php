@@ -1,6 +1,6 @@
 <?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
 <!doctype html>
-<html lang="en" ng-app='myApp' ng-controller='myController'>
+<html lang="en" ng-app='myApp'>
 
 <head>
 	<title ng-bind='title'></title>
