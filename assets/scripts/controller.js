@@ -5,7 +5,7 @@ function ($scope, NgTableParams, itemsFactory, toastr, $timeout, Excel) {
 	// Export Table As Excel
 	$scope.exportToExcel=function(tableId){ 
 		// ex: '#my-table'
-        var exportHref = Excel.tableToExcel(tableId,'WireWorkbenchDataExport');
+        var exportHref = Excel.tableToExcel(tableId,'ItemInventoryDataExport');
         $timeout(function(){location.href=exportHref;},100); // trigger download
 	}
 	
