@@ -14,7 +14,7 @@ PHP Codeigniter is used for the Rest API service & Angular controlls the whole p
 
 # Setup Instructions
 
-1. Create a Database 'Items-Inventory' for this application.
+1. Create a Database 'items-inventory' for this application.
 
 2. Export dbsql/project.sql into above created database.
 
